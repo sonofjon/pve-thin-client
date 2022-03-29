@@ -5,6 +5,7 @@
 #set -e
 
 # Set auth options
+#   TODO: A safer option is to use "--data-urlencode "password@$HOME/.pve-pass-file"
 PASSWORD='vdiuser'
 USERNAME='vdiuser@pve'
 
