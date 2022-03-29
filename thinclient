@@ -46,8 +46,8 @@ CSRF="${CSRF%%\}*}"
 #instead of the node that we specified with PROXY. Only useful in clustered scenarios,
 #but it doesn't hurt to leave it out.
 #I left the other command commented out, so you can replace the first curl with the second if you need the argument
-curl -f -s -S -k -b "PVEAuthCookie=$TICKET" -H "CSRFPreventionToken: $CSRF" "https://$PROXY:8006/api2/spiceconfig/nodes/$NODE/qemu/$VMID/spiceproxy" -X POST > spiceproxy
-#curl -f -s -S -k -b "PVEAuthCookie=$TICKET" -H "CSRFPreventionToken: $CSRF" "https://$PROXY:8006/api2/spiceconfig/nodes/$NODE/qemu/$VMID/spiceproxy" -X POST -d "proxy=$PROXY" > spiceproxy
+#curl -f -s -S -k -b "PVEAuthCookie=$TICKET" -H "CSRFPreventionToken: $CSRF" "https://$PROXY:8006/api2/spiceconfig/nodes/$NODE/qemu/$VMID/spiceproxy" -X POST > spiceproxy
+curl -f -s -S -k -b "PVEAuthCookie=$TICKET" -H "CSRFPreventionToken: $CSRF" "https://$PROXY:8006/api2/spiceconfig/nodes/$NODE/qemu/$VMID/spiceproxy" -X POST -d "proxy=$PROXY" > spiceproxy
 
 
 #Launch remote-viewer with spiceproxy file, in full screen mode
