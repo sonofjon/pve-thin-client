@@ -55,7 +55,6 @@ curl -f -s -S -k -b "PVEAuthCookie=$TICKET" -H "CSRFPreventionToken: $CSRF" "htt
 #Not calling via exec, so the script continues after remote-viewer exits
 remote-viewer -f spiceproxy
 
-#Kill lxsession
-#This is how LXDE is designed to logout, it's not a hack lol
-killall lxsession
-
+# Kill i3 session
+#i3 --replace
+i3-msg exit
