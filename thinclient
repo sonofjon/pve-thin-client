@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Reference: https://www.apalrd.net/posts/2022/raspi_spice_login/
+#
 #set -e
 
 # Set auth options
