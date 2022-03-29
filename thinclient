@@ -13,11 +13,12 @@ VMID="$1"
 
 # Set Node
 # This must either be a DNS address or name of the node in the cluster
-NODE="pvehost"
+NODE="pve-2"
 
 # Proxy equals node if node is a DNS address
 # Otherwise, you need to set the IP address of the node here
-PROXY="$NODE"
+#PROXY="$NODE"
+PROXY="192.168.1.2"
 
 #The rest of the script originated from a Proxmox example
 
